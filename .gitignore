@@ -1,9 +1,48 @@
+# Dépendances
 node_modules/
+.npm/
+.pnpm-store/
+.yarn/
+
+# Build
 dist/
+build/
+*.tsbuildinfo
+
+# Données locales et base SQLite
 data/
-.env
 *.sqlite
 *.sqlite-*
+*.db
 sauvegarde-*.sqlite
+backups/
+
+# Configuration et secrets (garder uniquement l'exemple)
+.env
+.env.*
+!.env.example
+
+# Journaux
+logs/
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Tests et couverture
+coverage/
+.nyc_output/
+
+# Fichiers temporaires
+tmp/
+.cache/
+*.tmp
+
+# Éditeurs et système
+.vscode/
+.idea/
+*.swp
+*~
 .DS_Store
+Thumbs.db
