@@ -1,0 +1,7 @@
+# SITE_ADDRESS vaut « :80 » (accès par IP:port, HTTP) tant que DOMAIN est vide dans .env,
+# puis le nom de domaine : Caddy obtient alors automatiquement un certificat HTTPS.
+{$SITE_ADDRESS} {
+	encode zstd gzip
+	reverse_proxy app:3000
+	header -Server
+}
